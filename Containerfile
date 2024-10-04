@@ -19,7 +19,7 @@ RUN tar xvf helm-linux-amd64.tar.gz --no-same-owner && \
     mv yq_linux_amd64 yq && \
     mv jq-linux-amd64 jq && \
     chmod +x yq && \
-    chmod +X roxctl && \
+    chmod +x roxctl && \
     chmod +x jq
 
 
