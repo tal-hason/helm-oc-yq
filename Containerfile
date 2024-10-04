@@ -19,7 +19,7 @@ RUN tar xvf helm-linux-amd64.tar.gz --no-same-owner && \
     mv yq_linux_amd64 yq && \
     mv jq-linux-amd64 jq && \
     chmod +x yq && \
-    cmhod +X roxctl && \
+    chmod +X roxctl && \
     chmod +x jq
 
 
@@ -40,8 +40,7 @@ RUN dnf update -y && \
     echo $PATH && \
     ls -l
 
-LABEL TOOLS="HELM, oc kubectl, yq, tkn, git, jq"
-LABEL Date="13/02/2024"
+LABEL TOOLS="HELM, oc kubectl, yq, tkn, git, jq, roxctl"
 
 USER 1000
 CMD /bin/bash
