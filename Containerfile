@@ -9,6 +9,7 @@ ADD https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable/open
 ADD https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 .
 ADD https://mirror.openshift.com/pub/openshift-v4/clients/pipeline/latest/tkn-linux-amd64.tar.gz .
 ADD https://github.com/jqlang/jq/releases/latest/download/jq-linux-amd64 .
+ADD https://mirror.openshift.com/pub/rhacs/assets/latest/bin/Linux/roxctl .
 
 RUN tar xvf helm-linux-amd64.tar.gz --no-same-owner && \
     tar xvf openshift-client-linux.tar.gz --no-same-owner && \
@@ -18,6 +19,7 @@ RUN tar xvf helm-linux-amd64.tar.gz --no-same-owner && \
     mv yq_linux_amd64 yq && \
     mv jq-linux-amd64 jq && \
     chmod +x yq && \
+    cmhod +X roxctl && \
     chmod +x jq
 
 
