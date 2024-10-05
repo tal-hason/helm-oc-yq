@@ -22,7 +22,7 @@ RUN tar xvf helm-linux-amd64.tar.gz --no-same-owner && \
     mv kargo-linux-amd64 kargo && \
     chmod +x yq && \
     chmod +x roxctl && \
-    chmode +x kargo \
+    chmod +x kargo \
     chmod +x jq
 
 
